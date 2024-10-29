@@ -1,0 +1,9 @@
+select distinct
+pc.model,
+p1.model,
+pc.speed,
+pc.ram
+from PC
+join pc p1 on pc.speed = p1.speed and pc.ram = p1.ram and pc.model > p1.model
+order by
+pc.model,p1.model
